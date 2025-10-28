@@ -67,7 +67,7 @@ class CalculatorTest {
 
     // Test for expected exceptions
     @Test
-    @DisplayName("Test division by zero throws exception now")
+    @DisplayName("Test division by zero throws exception now on")
     @Order(5)
     void testDivisionByZero() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
