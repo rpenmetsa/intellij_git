@@ -37,10 +37,10 @@ class CalculatorTest {
 
     // Basic test annotation
     @Test
-    @DisplayName("Test addition of two positive numbers")
+    @DisplayName("Test addition of two positive numbers now")
     @Order(1)
     void testAddition() {
-        assertEquals(5, calculator.add(2, 3), "2 + 3 should equal 5");
+        assertEquals(5, calculator.add2Numbers(2, 3), "2 + 3 should equal 5");
     }
 
     @Test
@@ -67,7 +67,7 @@ class CalculatorTest {
 
     // Test for expected exceptions
     @Test
-    @DisplayName("Test division by zero throws exception")
+    @DisplayName("Test division by zero throws exception now on")
     @Order(5)
     void testDivisionByZero() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
@@ -107,7 +107,7 @@ class CalculatorTest {
         @Test
         @DisplayName("Test addition with negative numbers")
         void testAddNegative() {
-            assertEquals(-1, calculator.add(-3, 2));
+            assertEquals(-1, calculator.add2Numbers(-3, 2));
         }
 
         @Test
@@ -134,7 +134,7 @@ class CalculatorTest {
         assertTimeout(Duration.ofSeconds(1), () -> {
             int result = 0;
             for (int i = 0; i < 1000; i++) {
-                result = calculator.add(result, 1);
+                result = calculator.add2Numbers(result, 1);
             }
             assertEquals(1000, result);
         });
@@ -156,7 +156,7 @@ class CalculatorTest {
                 System.getProperty("os.name").contains("Windows") ||
                 System.getProperty("os.name").contains("Mac"));
 
-        assertEquals(10, calculator.add(5, 5));
+        assertEquals(10, calculator.add2Numbers(5, 5));
     }
 
     // Multiple assertions in one test
@@ -165,7 +165,7 @@ class CalculatorTest {
     @Order(9)
     void testMultipleAssertions() {
         assertAll("calculator operations",
-                () -> assertEquals(5, calculator.add(2, 3)),
+                () -> assertEquals(5, calculator.add2Numbers(2, 3)),
                 () -> assertEquals(1, calculator.subtract(3, 2)),
                 () -> assertEquals(20, calculator.multiply(4, 5)),
                 () -> assertTrue(calculator.isEven(4))
