@@ -23,7 +23,7 @@ class CalculatorTest {
     // Runs once before all tests in this class
     @BeforeAll
     static void initAll() {
-        System.out.println("=== Starting Calculator Test Suite Update time===");
+        System.out.println("=== Starting Calculator Test Suite update date time and test===");
         testCounter = 0;
     }
 
