@@ -62,7 +62,7 @@ class CalculatorTest {
     @DisplayName("Test division")
     @Order(4)
     void testDivision() {
-        assertEquals(2.5, calculator.divide(5, 2), 0.001);
+        assertEquals(2.5, calculator.divide2Numbers(5, 2), 0.001);
     }
 
     // Test for expected exceptions
@@ -71,7 +71,7 @@ class CalculatorTest {
     @Order(5)
     void testDivisionByZero() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            calculator.divide(10, 0);
+            calculator.divide2Numbers(10, 0);
         });
         assertEquals("Cannot divide by zero", exception.getMessage());
     }
