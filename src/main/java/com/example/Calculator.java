@@ -2,7 +2,7 @@ package com.example;
 
 public class Calculator {
 
-    public int add(int a, int b) {
+    public int add2Numbers(int a, int b) {
         return a + b;
     }
 
