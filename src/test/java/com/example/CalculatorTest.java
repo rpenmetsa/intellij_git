@@ -23,7 +23,7 @@ class CalculatorTest {
     // Runs once before all tests in this class
     @BeforeAll
     static void initAll() {
-        System.out.println("=== Starting Calculator Test Suite ===");
+        System.out.println("=== Starting Calculator Test Suite Now ===");
         testCounter = 0;
     }
 
@@ -37,7 +37,7 @@ class CalculatorTest {
 
     // Basic test annotation
     @Test
-    @DisplayName("Test addition of two positive numbers")
+    @DisplayName("Test addition of two positive numbers now")
     @Order(1)
     void testAddition() {
         assertEquals(5, calculator.add2Numbers(2, 3), "2 + 3 should equal 5");
@@ -67,7 +67,7 @@ class CalculatorTest {
 
     // Test for expected exceptions
     @Test
-    @DisplayName("Test division by zero throws exception")
+    @DisplayName("Test division by zero throws exception now")
     @Order(5)
     void testDivisionByZero() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
